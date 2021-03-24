@@ -41,5 +41,5 @@ fff.close()
 
 if cur.rowcount == 1:
     print("성공")
-# 연결종료
+    
 con.close()

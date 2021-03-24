@@ -89,4 +89,5 @@ for s in range(1, 17002, 1000):
             f.write(h["DUTYTIME8C"] + "\t")
         f.write(h["DUTYTEL1"] + "\n")
 f.close()
+
     
