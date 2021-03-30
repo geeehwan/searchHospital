@@ -15,7 +15,7 @@
 			<td>
 				<table border="1" id="titleTbl">
 					<tr>
-						<td>GOOD DOC</td>
+						<td align="center">GOOD DOC</td>
 					</tr>
 				</table>
 				<table border="1" id="searchTbl">
@@ -91,15 +91,15 @@
 						</td>
 					</tr>
 					<tr>
-						<td>
-							<input>
+						<td align="center" colspan="3">
+							<input placeholder="병원명 or 진료과목을 검색하세요">
 						</td>
 					</tr>
 				</table>
 				<table border="1" id="contentTbl">
 					<tr>
-						<td></td>
-						<td></td>
+						<td align="center"></td>
+						<td align="center"></td>
 					</tr>
 				</table>
 				<table border="1" id="popupTbl">
