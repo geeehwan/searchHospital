@@ -9,6 +9,26 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="resources/js/jQuery.js"></script>
 <script type="text/javascript" src="resources/js/SonValidChecker.js"></script>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=1fc1b158b795a2b1fe9af16472babd6f"></script>
+<script type="text/javascript">
+	$(function(){
+		var c = new kakao.maps.LatLng(37.4130971, 127.1398567);
+		var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+		var options = { //지도를 생성할 때 필요한 기본 옵션
+			center: c, //지도의 중심좌표.
+			level: 3 //지도의 레벨(확대, 축소 정도)
+		};
+
+		var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+		
+		var marker = new kakao.maps.Marker({
+		    map: map,
+		    position: c,
+			title : "판교"
+		});
+
+	});
+</script>
 </head>
 <body>
 	<table border="1" id="mainTbl">
@@ -106,7 +126,9 @@
 				</table>
 				<table border="1" id="contentTbl">
 					<tr>
-						<td align="center" id="kakaoMap"></td>
+						<td align="center">
+							<div id="map" style="width:500px;height:250px;"></div>
+						</td>
 						<td align="center"></td>
 					</tr>
 				</table>
