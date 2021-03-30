@@ -12,13 +12,18 @@
 <body>
 	<table border="1" id="mainTbl">
 		<tr>
-			<td>
+			<td align="center">
 				<table border="1" id="titleTbl">
 					<tr>
 						<td align="center">GOOD DOC</td>
 					</tr>
 				</table>
 				<table border="1" id="searchTbl">
+					<tr>
+						<td align="center">지역</td>
+						<td align="center">방문예정시간</td>
+						<td align="center">응급실</td>
+					</tr>
 					<tr>
 						<td>
 							<select name="location" id="location">           
@@ -86,8 +91,8 @@
     						</select>
 						</td>
 						<td>
-							o<input type="radio" name="er">
-							x<input type="radio" name="er" checked="checked">
+							유<input type="radio" name="er">
+							무<input type="radio" name="er" checked="checked">
 						</td>
 					</tr>
 					<tr>
