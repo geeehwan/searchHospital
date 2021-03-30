@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="resources/css/index.css">
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="resources/js/jQuery.js"></script>
 <script type="text/javascript" src="resources/js/SonValidChecker.js"></script>
@@ -13,19 +14,19 @@
 	<table border="1" id="mainTbl">
 		<tr>
 			<td align="center">
-				<table border="1" id="titleTbl">
+				<table id="titleTbl">
 					<tr>
 						<td align="center">GOOD DOC</td>
 					</tr>
 				</table>
-				<table border="1" id="searchTbl">
+				<table id="searchTbl">
 					<tr>
-						<td align="center">지역</td>
-						<td align="center">방문예정시간</td>
-						<td align="center">응급실</td>
+						<td align="center" class="searchTitleTd">지역</td>
+						<td align="center" class="searchTitleTd">방문예정시간</td>
+						<td align="center" class="searchTitleTd">응급실</td>
 					</tr>
 					<tr>
-						<td>
+						<td align="center">
 							<select name="location" id="location">           
      							<option value="gn">강남구</option>    
      							<option value="gd">강동구</option>    
@@ -54,7 +55,7 @@
     							<option value="jra">중랑구</option>
     						</select>
 						</td>
-						<td>
+						<td align="center">
 							<select name="hour" id="hour">           
      							<option value="00h">00</option>    
      							<option value="01h">01</option>    
@@ -81,6 +82,7 @@
     							<option value="22h">22</option>
     							<option value="23h">23</option>
     						</select>
+    						&nbsp;
 							<select name="minute" id="minute">           
      							<option value="00m">00</option>    
     							<option value="10m">10</option>
@@ -90,20 +92,21 @@
     							<option value="50m">50</option>
     						</select>
 						</td>
-						<td>
+						<td align="center">
 							유<input type="radio" name="er">
+							&nbsp;&nbsp;
 							무<input type="radio" name="er" checked="checked">
 						</td>
 					</tr>
 					<tr>
 						<td align="center" colspan="3">
-							<input placeholder="병원명 or 진료과목을 검색하세요">
+							<input placeholder="병원명 or 진료과목을 검색하세요" id="searchInput">
 						</td>
 					</tr>
 				</table>
 				<table border="1" id="contentTbl">
 					<tr>
-						<td align="center"></td>
+						<td align="center" id="kakaoMap"></td>
 						<td align="center"></td>
 					</tr>
 				</table>
