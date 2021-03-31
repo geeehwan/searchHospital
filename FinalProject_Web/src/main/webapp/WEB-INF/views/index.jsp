@@ -13,7 +13,7 @@
 <script type="text/javascript" src="resources/js/jQuery.js"></script>
 <script type="text/javascript" src="resources/js/SonValidChecker.js"></script>
 <script type="text/javascript"
-	src="//dapi.kakao.com/v2/maps/sdk.js?appkey=1fc1b158b795a2b1fe9af16472babd6f"></script>
+	src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9556112c6875c9fcbc51bf07fb3cdb5e"></script>
 <script type="text/javascript">
 	$(function() {
 		navigator.geolocation.getCurrentPosition(function(loc) {
@@ -32,7 +32,25 @@
 			var marker = new kakao.maps.Marker({
 				map : map,
 				position : c,
-				title : "현위치"
+				title : "현위치",
+				clickable: true
+			});
+			
+			marker.setMap(map);
+			
+			var iwContent = '<div style="padding:5px;">Hello World!</div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+		    iwRemoveable = true; // removeable 속성을 ture 로 설정하면 인포윈도우를 닫을 수 있는 x버튼이 표시됩니다
+
+			var infowindow = new kakao.maps.InfoWindow({
+			    content : iwContent,
+			    removable : iwRemoveable
+			    
+			});
+		    
+			// 마커에 클릭이벤트를 등록합니다
+			kakao.maps.event.addListener(marker, 'click', function() {
+			      // 마커 위에 인포윈도우를 표시합니다
+			      location.href = "/detailInfo.go";
 			});
 		});
 
