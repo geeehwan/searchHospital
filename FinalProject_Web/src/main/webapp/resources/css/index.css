@@ -12,18 +12,24 @@ body{
 
 #titleTbl{
 	position: fixed;
-	top: 30px;
+	top: 0px;
 	height: 150px;
 	width: 100%;
-	font-size: 50pt;
+	font-size: 60pt;
+	color: #82B1FF;
 }
 
+
 .searchTitleTd{
-	font-size: 20pt;
+	font-size: 18pt;
+}
+#searchTbl td{
+	border: 3px solid #82B1FF;
+	
 }
 
 #searchTbl{
-	margin-top: 100px;
+	margin-top: 150px;
 	margin-left: auto;
 	margin-right: auto;
 	width: 50%;
@@ -31,6 +37,11 @@ body{
 
 #searchTbl select{
 	height: 30px;
+}
+
+#imgS2{
+	width: 30px;
+	margin-top: 30px; 
 }
 
 #location{

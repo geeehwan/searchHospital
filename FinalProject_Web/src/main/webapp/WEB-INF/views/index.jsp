@@ -1,8 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html>
-<head>
+<head> 
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="resources/css/index.css">
@@ -49,11 +51,14 @@
 				<table id="searchTbl">
 					<tr>
 						<td align="center" class="searchTitleTd">지역</td>
-						<td align="center" class="searchTitleTd">방문예정시간</td>
+						<td align="center" class="searchTitleTd">방문요일</td>
+						<td align="center" class="searchTitleTd">방문시간</td>
 						<td align="center" class="searchTitleTd">응급실</td>
 					</tr>
 					<tr>
-						<td align="center"><select name="location" id="location">
+						<td align="center">
+							<select name="location" id="location">
+								<option value="here">현위치</option>
 								<option value="gn">강남구</option>
 								<option value="gd">강동구</option>
 								<option value="gb">강북구</option>
@@ -79,8 +84,23 @@
 								<option value="jro">종로구</option>
 								<option value="j">중구</option>
 								<option value="jra">중랑구</option>
-						</select></td>
-						<td align="center"><select name="hour" id="hour">
+							</select>
+						</td>
+						<td align="center">
+							<select name="yoil" id="yoil">
+								<option value="choose">선택</option>
+								<option value="mon">월요일</option>
+								<option value="tue">화요일</option>
+								<option value="wed">수요일</option>
+								<option value="thu">목요일</option>
+								<option value="fri">금요일</option>
+								<option value="sat">토요일</option>
+								<option value="sun">일요일</option>
+								<option value="holiday">공휴일</option>
+							</select>
+						</td>
+						<td align="center">
+							<select name="hour" id="hour">
 								<option value="00h">00</option>
 								<option value="01h">01</option>
 								<option value="02h">02</option>
@@ -105,21 +125,28 @@
 								<option value="21h">21</option>
 								<option value="22h">22</option>
 								<option value="23h">23</option>
-						</select> &nbsp; <select name="minute" id="minute">
+							</select> &nbsp; 
+							<select name="minute" id="minute">
 								<option value="00m">00</option>
 								<option value="10m">10</option>
 								<option value="20m">20</option>
 								<option value="30m">30</option>
 								<option value="40m">40</option>
 								<option value="50m">50</option>
-						</select></td>
-						<td align="center">유<input type="radio" name="er">
-							&nbsp;&nbsp; 무<input type="radio" name="er" checked="checked">
+							</select>
+						</td>
+						<td align="center">
+							유<input type="radio" name="er">&nbsp;&nbsp;
+							무<input type="radio" name="er" checked="checked">
 						</td>
 					</tr>
 					<tr>
-						<td align="center" colspan="3"><input
-							placeholder="병원명 or 진료과목을 검색하세요" id="searchInput"></td>
+						<td align="center">
+							<img src="resources/img/s2.png" id="imgS2">
+						</td>
+						<td align="center" colspan="2">
+							<input placeholder="병원명 or 진료과목을 검색하세요" id="searchInput">
+						</td>
 					</tr>
 				</table>
 				<table border="1" id="contentTbl">
@@ -127,12 +154,9 @@
 						<td align="center">
 							<div id="map" style="width: 500px; height: 250px;"></div>
 						</td>
-						<td align="center"></td>
-					</tr>
-				</table>
-				<table border="1" id="popupTbl">
-					<tr>
-						<td></td>
+						<td align="center">
+							<jsp:include page="${contentPage }"></jsp:include>
+						</td>
 					</tr>
 				</table>
 			</td>
