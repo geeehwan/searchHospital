@@ -10,32 +10,35 @@ public class HospitalInfo {
 	private String dutytel1;
 	private BigDecimal wgs84lat;
 	private BigDecimal wgs84lon;
-	private String dutytime1s;
-	private String dutytime1c;
-	private String dutytime2s;
-	private String dutytime2c;
-	private String dutytime3s;
-	private String dutytime3c;
-	private String dutytime4s;
-	private String dutytime4c;
-	private String dutytime5s;
-	private String dutytime5c;
-	private String dutytime6s;
-	private String dutytime6c;
-	private String dutytime7s;
-	private String dutytime7c;
-	private String dutytime8s;
-	private String dutytime8c;
+	private BigDecimal dutytime1s;
+	private BigDecimal dutytime1c;
+	private BigDecimal dutytime2s;
+	private BigDecimal dutytime2c;
+	private BigDecimal dutytime3s;
+	private BigDecimal dutytime3c;
+	private BigDecimal dutytime4s;
+	private BigDecimal dutytime4c;
+	private BigDecimal dutytime5s;
+	private BigDecimal dutytime5c;
+	private BigDecimal dutytime6s;
+	private BigDecimal dutytime6c;
+	private BigDecimal dutytime7s;
+	private BigDecimal dutytime7c;
+	private BigDecimal dutytime8s;
+	private BigDecimal dutytime8c;
+	private BigDecimal dutytimeS;
+	private BigDecimal dutytimeC;
 	
 	public HospitalInfo() {
 		// TODO Auto-generated constructor stub
 	}
-	
+
 	public HospitalInfo(BigDecimal dutyno, String dutyaddr, BigDecimal dutyeryn, String dutyname, String dutytel1,
-			BigDecimal wgs84lat, BigDecimal wgs84lon, String dutytime1s, String dutytime1c, String dutytime2s,
-			String dutytime2c, String dutytime3s, String dutytime3c, String dutytime4s, String dutytime4c,
-			String dutytime5s, String dutytime5c, String dutytime6s, String dutytime6c, String dutytime7s,
-			String dutytime7c, String dutytime8s, String dutytime8c) {
+			BigDecimal wgs84lat, BigDecimal wgs84lon, BigDecimal dutytime1s, BigDecimal dutytime1c,
+			BigDecimal dutytime2s, BigDecimal dutytime2c, BigDecimal dutytime3s, BigDecimal dutytime3c,
+			BigDecimal dutytime4s, BigDecimal dutytime4c, BigDecimal dutytime5s, BigDecimal dutytime5c,
+			BigDecimal dutytime6s, BigDecimal dutytime6c, BigDecimal dutytime7s, BigDecimal dutytime7c,
+			BigDecimal dutytime8s, BigDecimal dutytime8c, BigDecimal dutytimeS, BigDecimal dutytimeC) {
 		super();
 		this.dutyno = dutyno;
 		this.dutyaddr = dutyaddr;
@@ -60,6 +63,8 @@ public class HospitalInfo {
 		this.dutytime7c = dutytime7c;
 		this.dutytime8s = dutytime8s;
 		this.dutytime8c = dutytime8c;
+		this.dutytimeS = dutytimeS;
+		this.dutytimeC = dutytimeC;
 	}
 
 	public BigDecimal getDutyno() {
@@ -118,133 +123,151 @@ public class HospitalInfo {
 		this.wgs84lon = wgs84lon;
 	}
 
-	public String getDutytime1s() {
+	public BigDecimal getDutytime1s() {
 		return dutytime1s;
 	}
 
-	public void setDutytime1s(String dutytime1s) {
+	public void setDutytime1s(BigDecimal dutytime1s) {
 		this.dutytime1s = dutytime1s;
 	}
 
-	public String getDutytime1c() {
+	public BigDecimal getDutytime1c() {
 		return dutytime1c;
 	}
 
-	public void setDutytime1c(String dutytime1c) {
+	public void setDutytime1c(BigDecimal dutytime1c) {
 		this.dutytime1c = dutytime1c;
 	}
 
-	public String getDutytime2s() {
+	public BigDecimal getDutytime2s() {
 		return dutytime2s;
 	}
 
-	public void setDutytime2s(String dutytime2s) {
+	public void setDutytime2s(BigDecimal dutytime2s) {
 		this.dutytime2s = dutytime2s;
 	}
 
-	public String getDutytime2c() {
+	public BigDecimal getDutytime2c() {
 		return dutytime2c;
 	}
 
-	public void setDutytime2c(String dutytime2c) {
+	public void setDutytime2c(BigDecimal dutytime2c) {
 		this.dutytime2c = dutytime2c;
 	}
 
-	public String getDutytime3s() {
+	public BigDecimal getDutytime3s() {
 		return dutytime3s;
 	}
 
-	public void setDutytime3s(String dutytime3s) {
+	public void setDutytime3s(BigDecimal dutytime3s) {
 		this.dutytime3s = dutytime3s;
 	}
 
-	public String getDutytime3c() {
+	public BigDecimal getDutytime3c() {
 		return dutytime3c;
 	}
 
-	public void setDutytime3c(String dutytime3c) {
+	public void setDutytime3c(BigDecimal dutytime3c) {
 		this.dutytime3c = dutytime3c;
 	}
 
-	public String getDutytime4s() {
+	public BigDecimal getDutytime4s() {
 		return dutytime4s;
 	}
 
-	public void setDutytime4s(String dutytime4s) {
+	public void setDutytime4s(BigDecimal dutytime4s) {
 		this.dutytime4s = dutytime4s;
 	}
 
-	public String getDutytime4c() {
+	public BigDecimal getDutytime4c() {
 		return dutytime4c;
 	}
 
-	public void setDutytime4c(String dutytime4c) {
+	public void setDutytime4c(BigDecimal dutytime4c) {
 		this.dutytime4c = dutytime4c;
 	}
 
-	public String getDutytime5s() {
+	public BigDecimal getDutytime5s() {
 		return dutytime5s;
 	}
 
-	public void setDutytime5s(String dutytime5s) {
+	public void setDutytime5s(BigDecimal dutytime5s) {
 		this.dutytime5s = dutytime5s;
 	}
 
-	public String getDutytime5c() {
+	public BigDecimal getDutytime5c() {
 		return dutytime5c;
 	}
 
-	public void setDutytime5c(String dutytime5c) {
+	public void setDutytime5c(BigDecimal dutytime5c) {
 		this.dutytime5c = dutytime5c;
 	}
 
-	public String getDutytime6s() {
+	public BigDecimal getDutytime6s() {
 		return dutytime6s;
 	}
 
-	public void setDutytime6s(String dutytime6s) {
+	public void setDutytime6s(BigDecimal dutytime6s) {
 		this.dutytime6s = dutytime6s;
 	}
 
-	public String getDutytime6c() {
+	public BigDecimal getDutytime6c() {
 		return dutytime6c;
 	}
 
-	public void setDutytime6c(String dutytime6c) {
+	public void setDutytime6c(BigDecimal dutytime6c) {
 		this.dutytime6c = dutytime6c;
 	}
 
-	public String getDutytime7s() {
+	public BigDecimal getDutytime7s() {
 		return dutytime7s;
 	}
 
-	public void setDutytime7s(String dutytime7s) {
+	public void setDutytime7s(BigDecimal dutytime7s) {
 		this.dutytime7s = dutytime7s;
 	}
 
-	public String getDutytime7c() {
+	public BigDecimal getDutytime7c() {
 		return dutytime7c;
 	}
 
-	public void setDutytime7c(String dutytime7c) {
+	public void setDutytime7c(BigDecimal dutytime7c) {
 		this.dutytime7c = dutytime7c;
 	}
 
-	public String getDutytime8s() {
+	public BigDecimal getDutytime8s() {
 		return dutytime8s;
 	}
 
-	public void setDutytime8s(String dutytime8s) {
+	public void setDutytime8s(BigDecimal dutytime8s) {
 		this.dutytime8s = dutytime8s;
 	}
 
-	public String getDutytime8c() {
+	public BigDecimal getDutytime8c() {
 		return dutytime8c;
 	}
 
-	public void setDutytime8c(String dutytime8c) {
+	public void setDutytime8c(BigDecimal dutytime8c) {
 		this.dutytime8c = dutytime8c;
 	}
+
+	public BigDecimal getDutytimeS() {
+		return dutytimeS;
+	}
+
+	public void setDutytimeS(BigDecimal dutytimeS) {
+		this.dutytimeS = dutytimeS;
+	}
+
+	public BigDecimal getDutytimeC() {
+		return dutytimeC;
+	}
+
+	public void setDutytimeC(BigDecimal dutytimeC) {
+		this.dutytimeC = dutytimeC;
+	}
+	
+	
 	
 	
 }
