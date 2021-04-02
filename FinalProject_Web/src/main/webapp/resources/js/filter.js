@@ -23,9 +23,13 @@ function ec(){
 		alert("6");
 		
 	});
-	$("#searchInput").change(function(){
+	$("#searchInput").keyup(function(){
 		alert("7");
 		
 	});
 	
 }
+
+$(function(){
+	ec();
+});
