@@ -8,12 +8,11 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="resources/css/index.css">
-<script type="text/javascript"
-	src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="resources/js/jQuery.js"></script>
 <script type="text/javascript" src="resources/js/SonValidChecker.js"></script>
-<script type="text/javascript"
-	src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9556112c6875c9fcbc51bf07fb3cdb5e"></script>
+<script type="text/javascript" src="resources/js/filter.js"></script>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9556112c6875c9fcbc51bf07fb3cdb5e"></script>
 <script type="text/javascript">
 	$(function() {
 		navigator.geolocation.getCurrentPosition(function(loc) {
@@ -75,33 +74,33 @@
 					</tr>
 					<tr>
 						<td align="center">
-							<select name="location" id="location">
-								<option value="here">현위치</option>
-								<option value="gn">강남구</option>
-								<option value="gd">강동구</option>
-								<option value="gb">강북구</option>
-								<option value="gs">강서구</option>
-								<option value="ga">관악구</option>
-								<option value="gj">광진구</option>
-								<option value="gr">구로구</option>
-								<option value="gc">금천구</option>
-								<option value="nw">노원구</option>
-								<option value="db">도봉구</option>
-								<option value="ddm">동대문구</option>
-								<option value="dj">동작구</option>
-								<option value="mp">마포구</option>
-								<option value="sdm">서대문구</option>
-								<option value="sc">서초구</option>
-								<option value="sd">성동구</option>
-								<option value="sb">성북구</option>
-								<option value="sp">송파구</option>
-								<option value="yc">양천구</option>
-								<option value="ydp">영등포구</option>
-								<option value="ys">용산구</option>
-								<option value="ep">은평구</option>
-								<option value="jro">종로구</option>
-								<option value="j">중구</option>
-								<option value="jra">중랑구</option>
+							<select name="dutyaddr" id="location">
+								<option>현위치</option>
+								<option>강남구</option>
+								<option>강동구</option>
+								<option>강북구</option>
+								<option>강서구</option>
+								<option>관악구</option>
+								<option>광진구</option>
+								<option>구로구</option>
+								<option>금천구</option>
+								<option>노원구</option>
+								<option>도봉구</option>
+								<option>동대문구</option>
+								<option>동작구</option>
+								<option>마포구</option>
+								<option>서대문구</option>
+								<option>서초구</option>
+								<option>성동구</option>
+								<option>성북구</option>
+								<option>송파구</option>
+								<option>양천구</option>
+								<option>영등포구</option>
+								<option>용산구</option>
+								<option>은평구</option>
+								<option>종로구</option>
+								<option>중구</option>
+								<option>중랑구</option>
 							</select>
 						</td>
 						<td align="center">
@@ -119,43 +118,39 @@
 						</td>
 						<td align="center">
 							<select name="hour" id="hour">
-								<option value="00h">00</option>
-								<option value="01h">01</option>
-								<option value="02h">02</option>
-								<option value="03h">03</option>
-								<option value="04h">04</option>
-								<option value="05h">05</option>
-								<option value="06h">06</option>
-								<option value="07h">07</option>
-								<option value="08h">08</option>
-								<option value="09h">09</option>
-								<option value="10h">10</option>
-								<option value="11h">11</option>
-								<option value="12h">12</option>
-								<option value="13h">13</option>
-								<option value="14h">14</option>
-								<option value="15h">15</option>
-								<option value="16h">16</option>
-								<option value="17h">17</option>
-								<option value="18h">18</option>
-								<option value="19h">19</option>
-								<option value="20h">20</option>
-								<option value="21h">21</option>
-								<option value="22h">22</option>
-								<option value="23h">23</option>
+								<option>00</option>
+								<option>01</option>
+								<option>02</option>
+								<option>03</option>
+								<option>04</option>
+								<option>05</option>
+								<option>06</option>
+								<option>07</option>
+								<option>08</option>
+								<option>09</option>
+								<option>10</option>
+								<option>11</option>
+								<option>12</option>
+								<option>13</option>
+								<option>14</option>
+								<option>15</option>
+								<option>16</option>
+								<option>17</option>
+								<option>18</option>
+								<option>19</option>
+								<option>20</option>
+								<option>21</option>
+								<option>22</option>
+								<option>23</option>
 							</select> &nbsp; 
 							<select name="minute" id="minute">
-								<option value="00m">00</option>
-								<option value="10m">10</option>
-								<option value="20m">20</option>
-								<option value="30m">30</option>
-								<option value="40m">40</option>
-								<option value="50m">50</option>
+								<option>00</option>
+								<option>30</option>
 							</select>
 						</td>
 						<td align="center">
-							유<input type="radio" name="er">&nbsp;&nbsp;
-							무<input type="radio" name="er" checked="checked">
+							유<input type="radio" name="dutyeryn" value="1" id="ery">&nbsp;&nbsp;
+							무<input type="radio" name="dutyeryn" value="2" checked="checked" id="ern">
 						</td>
 					</tr>
 					<tr>
