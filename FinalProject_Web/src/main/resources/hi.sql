@@ -1,26 +1,29 @@
 create table hospital_info(
-	--병원분류는 안쓸거니까 뺴도 되지않을까?
-	
-	DUTYADDR --주소
-	DUTYERYN --응급실운영여부
-	DUTYNAME --병원이름
-	DUTYTEL1 --전화번호
-	WGS84LON --병원경도
-	WGS84LAT --병원위도
-	DUTYTIME1S
-	DUTYTIME1C
-	DUTYTIME2S
-	DUTYTIME2C
-	DUTYTIME3S
-	DUTYTIME3C
-	DUTYTIME4S
-	DUTYTIME4C
-	DUTYTIME5S
-	DUTYTIME5C
-	DUTYTIME6S
-	DUTYTIME6C
-	DUTYTIME7S
-	DUTYTIME7C
-	DUTYTIME8S
-	DUTYTIME8C
-);
+	DUTYNO number(6) primary key,
+	DUTYADDR varchar2(250 char) not null,
+	DUTYERYN number(2) not null,
+	DUTYNAME varchar2(150 char) not null,
+	DUTYTEL1 varchar2(50 char) not null,
+	WGS84LAT number(30,26) not null,
+	WGS84LON number(30,26) not null,
+	DUTYTIME1S number(5) not null,
+	DUTYTIME1C number(5) not null,
+	DUTYTIME2S number(5) not null,
+	DUTYTIME2C number(5) not null,
+	DUTYTIME3S number(5) not null,
+	DUTYTIME3C number(5) not null,
+	DUTYTIME4S number(5) not null,
+	DUTYTIME4C number(5) not null,
+	DUTYTIME5S number(5) not null,
+	DUTYTIME5C number(5) not null,
+	DUTYTIME6S number(5) not null,
+	DUTYTIME6C number(5) not null,
+	DUTYTIME7S number(5) not null,
+	DUTYTIME7C number(5) not null,
+	DUTYTIME8S number(5) not null,
+	DUTYTIME8C number(5) not null
+); 
+insert into hospital_info values(hospital_info_seq.nextval, '서울특별시 강남구 봉은사로 612 (삼성동)', 2, '(의)가산의료재단광동한방병원', '02-2222-4888', 127.062148, 37.514280, '0900', '1800', '0900', '1800', '0900', '1800', '0900', '1800', '0900', '1800', '0900', '1500', '0', '0', '0', '0')
+create sequence hospital_info_seq;
+select * from hospital_info;
+drop table hospital_info;
