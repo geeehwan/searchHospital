@@ -168,7 +168,6 @@
 							<div id="map" style="width: 500px; height: 250px;"></div>
 						</td>
 						<td align="center">
-							<jsp:include page="${contentPage }"></jsp:include>
 						</td>
 					</tr>
 				</table>

@@ -12,7 +12,6 @@
 <script type="text/javascript" src="resources/js/jQuery.js"></script>
 <script type="text/javascript" src="resources/js/SonValidChecker.js"></script>
 <script type="text/javascript" src="resources/js/filter.js"></script>
-	location.href =
 
 </head>
 <body>

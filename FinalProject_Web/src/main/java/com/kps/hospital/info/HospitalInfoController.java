@@ -14,12 +14,21 @@ public class HospitalInfoController {
 	@Autowired
 	private HospitalInfoDAO hiDAO;
 
+	@RequestMapping(value = "/list.get", method = RequestMethod.GET)
+	public String getList(HttpServletRequest req, HttpServletResponse res, HospitalInfo hi) {
+		System.out.println("ㅋㅋ");
+		hiDAO.search(req, hi);
+		return "index";
+	}
+	
 	// list에서 클릭하면 detailInfo 보여줌
 	@RequestMapping(value = "/detailInfo.go", method = RequestMethod.GET)
 	public String showDetailInfo(HttpServletRequest req, HttpServletResponse res, HospitalInfo hi) {
 		req.setAttribute("contentPage", "detailInfo.jsp");
 		return "index";
 	}
+	
+
 	
 	
 	
