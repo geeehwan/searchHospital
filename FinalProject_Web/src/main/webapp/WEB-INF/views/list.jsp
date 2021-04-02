@@ -17,7 +17,6 @@
 <body>
 	<table border="1" id="listTbl">
 		<c:forEach var="lists" items="${lists }">
-	
 			<tr>
 				<td onclick="">
 					<br>	

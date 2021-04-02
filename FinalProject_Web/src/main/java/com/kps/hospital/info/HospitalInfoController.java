@@ -16,8 +16,8 @@ public class HospitalInfoController {
 
 	@RequestMapping(value = "/list.get", method = RequestMethod.GET)
 	public String getList(HttpServletRequest req, HttpServletResponse res, HospitalInfo hi) {
-		System.out.println("ㅋㅋ");
 		hiDAO.search(req, hi);
+		req.setAttribute("contentPage", "list.jsp");
 		return "index";
 	}
 	

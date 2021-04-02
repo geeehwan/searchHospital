@@ -1,13 +1,15 @@
 function getList() {
-	var location = $("#location").val();
-//	var yoil = $("#yoil").val();
-//	var hour = $("#hour").val();
-//	var minute = $("#minute").val();
-//	var ery = $("#ery").val();
-//	var ern = $("#ern").val();
-//	var searchInput = $("#searchInput").val();
+	var loc = $("#location").val();
+	var yoil = $("#yoil").val();
+	var hour = $("#hour").val();
+	var minute = $("#minute").val();
+	var ery = $("#ery").val();
+	var ern = $("#ern").val();
+	var searchInput = $("#searchInput").val();
 
-	location.href = "list.get?dutyaddr=" + location; // + "&yoil=" + yoil; // + "&hour=" + hour + "&minute=" + minute + "&ery=" + ery + "&ern=" + ern + "&searchInput=" + searchInput;
+	$.getJSON("list.get?dutyaddr=" + loc + "&yoil=" + yoil + "&hour=" + hour + "&minute=" + minute + "&ery=" + ery + "&ern=" + ern + "&searchInput=" + searchInput, function(){
+		
+	});
 }
 
 function ec(){

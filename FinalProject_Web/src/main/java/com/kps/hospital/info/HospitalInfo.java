@@ -26,19 +26,20 @@ public class HospitalInfo {
 	private BigDecimal dutytime7c;
 	private BigDecimal dutytime8s;
 	private BigDecimal dutytime8c;
-	private BigDecimal dutytimeS;
-	private BigDecimal dutytimeC;
+	private BigDecimal visitTime;
 	
 	public HospitalInfo() {
 		// TODO Auto-generated constructor stub
 	}
+	
+	
 
 	public HospitalInfo(BigDecimal dutyno, String dutyaddr, BigDecimal dutyeryn, String dutyname, String dutytel1,
 			BigDecimal wgs84lat, BigDecimal wgs84lon, BigDecimal dutytime1s, BigDecimal dutytime1c,
 			BigDecimal dutytime2s, BigDecimal dutytime2c, BigDecimal dutytime3s, BigDecimal dutytime3c,
 			BigDecimal dutytime4s, BigDecimal dutytime4c, BigDecimal dutytime5s, BigDecimal dutytime5c,
 			BigDecimal dutytime6s, BigDecimal dutytime6c, BigDecimal dutytime7s, BigDecimal dutytime7c,
-			BigDecimal dutytime8s, BigDecimal dutytime8c, BigDecimal dutytimeS, BigDecimal dutytimeC) {
+			BigDecimal dutytime8s, BigDecimal dutytime8c, BigDecimal visitTime) {
 		super();
 		this.dutyno = dutyno;
 		this.dutyaddr = dutyaddr;
@@ -63,8 +64,7 @@ public class HospitalInfo {
 		this.dutytime7c = dutytime7c;
 		this.dutytime8s = dutytime8s;
 		this.dutytime8c = dutytime8c;
-		this.dutytimeS = dutytimeS;
-		this.dutytimeC = dutytimeC;
+		this.visitTime = visitTime;
 	}
 
 	public BigDecimal getDutyno() {
@@ -251,24 +251,13 @@ public class HospitalInfo {
 		this.dutytime8c = dutytime8c;
 	}
 
-	public BigDecimal getDutytimeS() {
-		return dutytimeS;
+	public BigDecimal getVisitTime() {
+		return visitTime;
 	}
 
-	public void setDutytimeS(BigDecimal dutytimeS) {
-		this.dutytimeS = dutytimeS;
+	public void setVisitTime(BigDecimal visitTime) {
+		this.visitTime = visitTime;
 	}
-
-	public BigDecimal getDutytimeC() {
-		return dutytimeC;
-	}
-
-	public void setDutytimeC(BigDecimal dutytimeC) {
-		this.dutytimeC = dutytimeC;
-	}
-	
-	
-	
 	
 }
-
+	
