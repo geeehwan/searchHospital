@@ -1,5 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.kps.hospital.HospitalMapper">
-
+	<select id="searchHospitalName1" parameterType="com.kps.hospital.info.HospitalInfo" resultType="com.kps.hospital.info.HospitalInfo">
+		select * from hospital_info where dutyname like '%'||#{dutyname}||'%' and dutyaddr like '%'||#{dutyaddr}||'%'
+		and dutytime1s != 0 and dutytime1s &gt;=#{dutytimeS} and dutytime1c &lt;=#{dutytimeC} 
+		and dutyeryn = #{dutyeryn}
+	</select>
+	<select id="searchHospitalName2" parameterType="com.kps.hospital.info.HospitalInfo" resultType="com.kps.hospital.info.HospitalInfo">
+		select * from hospital_info where dutyname like '%'||#{dutyname}||'%' and dutyaddr like '%'||#{dutyaddr}||'%'
+		and dutytime1s != 0 and dutytime1s &gt;=#{dutytimeS} and dutytime1c &lt;=#{dutytimeC} 
+		and dutyeryn = #{dutyeryn}
+	</select>
+	<select id="searchHospitalName3" parameterType="com.kps.hospital.info.HospitalInfo" resultType="com.kps.hospital.info.HospitalInfo">
+		select * from hospital_info where dutyname like '%'||#{dutyname}||'%' and dutyaddr like '%'||#{dutyaddr}||'%'
+		and dutytime1s != 0 and dutytime1s &gt;=#{dutytimeS} and dutytime1c &lt;=#{dutytimeC} 
+		and dutyeryn = #{dutyeryn}
+	</select>
+	<select id="searchHospitalName4" parameterType="com.kps.hospital.info.HospitalInfo" resultType="com.kps.hospital.info.HospitalInfo">
+		select * from hospital_info where dutyname like '%'||#{dutyname}||'%' and dutyaddr like '%'||#{dutyaddr}||'%'
+		and dutytime1s != 0 and dutytime1s &gt;=#{dutytimeS} and dutytime1c &lt;=#{dutytimeC} 
+		and dutyeryn = #{dutyeryn}
+	</select>
+	<select id="searchHospitalName5" parameterType="com.kps.hospital.info.HospitalInfo" resultType="com.kps.hospital.info.HospitalInfo">
+		select * from hospital_info where dutyname like '%'||#{dutyname}||'%' and dutyaddr like '%'||#{dutyaddr}||'%'
+		and dutytime1s != 0 and dutytime1s &gt;=#{dutytimeS} and dutytime1c &lt;=#{dutytimeC} 
+		and dutyeryn = #{dutyeryn}
+	</select>
+	<select id="searchHospitalName6" parameterType="com.kps.hospital.info.HospitalInfo" resultType="com.kps.hospital.info.HospitalInfo">
+		select * from hospital_info where dutyname like '%'||#{dutyname}||'%' and dutyaddr like '%'||#{dutyaddr}||'%'
+		and dutytime1s != 0 and dutytime1s &gt;=#{dutytimeS} and dutytime1c &lt;=#{dutytimeC} 
+		and dutyeryn = #{dutyeryn}
+	</select>
+	<select id="searchHospitalName7" parameterType="com.kps.hospital.info.HospitalInfo" resultType="com.kps.hospital.info.HospitalInfo">
+		select * from hospital_info where dutyname like '%'||#{dutyname}||'%' and dutyaddr like '%'||#{dutyaddr}||'%'
+		and dutytime1s != 0 and dutytime1s &gt;=#{dutytimeS} and dutytime1c &lt;=#{dutytimeC} 
+		and dutyeryn = #{dutyeryn}
+	</select>
+	<select id="searchHospitalName8" parameterType="com.kps.hospital.info.HospitalInfo" resultType="com.kps.hospital.info.HospitalInfo">
+		select * from hospital_info where dutyname like '%'||#{dutyname}||'%' and dutyaddr like '%'||#{dutyaddr}||'%'
+		and dutytime1s != 0 and dutytime1s &gt;=#{dutytimeS} and dutytime1c &lt;=#{dutytimeC} 
+		and dutyeryn = #{dutyeryn}
+	</select>
 </mapper>
