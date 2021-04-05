@@ -1,13 +1,12 @@
-function getList() {
+function getList() { 
 	var loc = $("#location").val();
 	var yoil = $("#yoil").val();
 	var hour = $("#hour").val();
 	var minute = $("#minute").val();
-	var ery = $("#ery").val();
-	var ern = $("#ern").val();
+	var dutyeryn = $("#dutyeryn").val();
 	var searchInput = $("#searchInput").val(); 
 
-	$.getJSON("hospital.get.json?dutyaddr=" + loc + "&yoil=" + yoil + "&hour=" + hour + "&minute=" + minute + "&ery=" + ery + "&ern=" + ern + "&searchInput=" + searchInput, function(){
+	$.getJSON("hospital.get.json?location=" + loc + "&yoil=" + yoil + "&hour=" + hour + "&minute=" + minute + "&dutyeryn=" + dutyeryn + "&searchInput=" + searchInput, function(){
 		alert("vjkhbkl");
 	});
 }

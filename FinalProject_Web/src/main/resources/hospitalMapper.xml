@@ -5,7 +5,7 @@
 		select * from hospital_info where dutyname like '%'||#{dutyname}||'%' and dutyaddr like '%'||#{dutyaddr}||'%'
 		and dutytime1s != 0 and dutytime1s &lt;= #{visitTime} and dutytime1c &gt;= #{visitTime} 
 		and dutyeryn = #{dutyeryn} 
-	</select>
+	</select> 
 	<select id="searchHospitalName2" parameterType="com.kps.hospital.info.HospitalInfo" resultType="com.kps.hospital.info.HospitalInfo">
 		select * from hospital_info where dutyname like '%'||#{dutyname}||'%' and dutyaddr like '%'||#{dutyaddr}||'%'
 		and dutytime2s != 0 and dutytime2s &lt;= #{visitTime} and dutytime2c &gt;= #{visitTime} 

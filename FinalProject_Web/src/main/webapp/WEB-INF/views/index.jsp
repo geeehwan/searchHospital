@@ -12,7 +12,7 @@
 <script type="text/javascript" src="resources/js/SonValidChecker.js"></script>
 <script type="text/javascript" src="resources/js/filter.js"></script>
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9556112c6875c9fcbc51bf07fb3cdb5e"></script>
-<script type="text/javascript">
+<script type="text/javascript"> 
 	$(function() {
 		navigator.geolocation.getCurrentPosition(function(loc) {
 			var lat = loc.coords.latitude;
@@ -147,18 +147,20 @@
 							</select>
 						</td>
 						<td align="center">
-							유<input type="radio" name="dutyeryn" value="1" id="ery">&nbsp;&nbsp;
-							무<input type="radio" name="dutyeryn" value="2" checked="checked" id="ern">
+							<select name="dutyeryn" id="dutyeryn">
+								<option value="1">유</option>
+								<option value="2">무</option>
+							</select>
 						</td>
-					</tr>
-							<tr>
-								<td align="right">
-									<img src="resources/img/s2.png" id="imgS2">
-								</td>
-								<td align="center" colspan="2">
-									<input placeholder="병원명 or 진료과목을 검색하세요" id="searchInput">
-								</td>
-							</tr>
+						</tr>
+						<tr>
+							<td align="right">
+								<img src="resources/img/s2.png" id="imgS2">
+							</td>
+							<td align="center" colspan="2">
+								<input placeholder="병원명 or 진료과목을 검색하세요" id="searchInput">
+							</td>
+						</tr>
 				</table>
 				<table border="1" id="contentTbl">
 					<tr>

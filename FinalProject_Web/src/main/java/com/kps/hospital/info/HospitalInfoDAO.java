@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 public class HospitalInfoDAO {
 
 	@Autowired
-	private SqlSession ss;
+	private SqlSession ss; 
 	
 	// 검색어 치면 찾아주는 메소드
 	public HospitalInfos search(HttpServletRequest req, HospitalInfo hi) {
@@ -25,17 +25,17 @@ public class HospitalInfoDAO {
 			String time = hour + minute;
 			int time2 = Integer.parseInt(time); 
 			hi.setVisitTime(new BigDecimal(time2));
-			 System.out.println(time2);
+			System.out.println(time2);
 			hi.setDutyname(req.getParameter("searchInput"));
 			hi.setDutyaddr(req.getParameter("location"));
-			
-			if (Integer.parseInt(req.getParameter("ery")) == 1) {
-				hi.setDutyeryn(new BigDecimal(Integer.parseInt(req.getParameter("ery"))));
-			} else {
-				hi.setDutyeryn(new BigDecimal(Integer.parseInt(req.getParameter("ern"))));
-			}
+			hi.setDutyeryn(new BigDecimal(Integer.parseInt(req.getParameter("dutyeryn"))));
+			System.out.println(req.getParameter("searchInput"));
+			System.out.println(req.getParameter("location"));
+			System.out.println(req.getParameter("dutyeryn"));
+			System.out.println(req.getParameter("yoil"));
 			
 			if (req.getParameter("yoil").equals("mon")) {
+				System.out.println(ss.getMapper(HospitalMapper.class).searchHospitalName1(hi).size());
 				return new HospitalInfos(ss.getMapper(HospitalMapper.class).searchHospitalName1(hi));
 			} else if (req.getParameter("yoil").equals("tue")) {
 				return new HospitalInfos(ss.getMapper(HospitalMapper.class).searchHospitalName2(hi));
@@ -52,6 +52,7 @@ public class HospitalInfoDAO {
 			} else {
 				return new HospitalInfos(ss.getMapper(HospitalMapper.class).searchHospitalName8(hi));
 			}
+		
 		} catch (Exception e) {
 			e.printStackTrace();
 		} 

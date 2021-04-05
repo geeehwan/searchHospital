@@ -27,3 +27,6 @@ insert into hospital_info values(hospital_info_seq.nextval, '서울특별시 강
 create sequence hospital_info_seq;
 select * from hospital_info;
 drop table hospital_info;
+select * from hospital_info where dutyname like '%외과%' and dutyaddr like '%강남구%'
+		and dutytime1s != 0 and dutytime1s <= 1500 and dutytime1c >= 1500
+		and dutyeryn = 2;  
