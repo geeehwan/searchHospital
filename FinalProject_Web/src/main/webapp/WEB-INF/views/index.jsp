@@ -56,15 +56,15 @@
 </script>
 </head>
 <body>
-	<table border="1" id="mainTbl">
+	<table id="mainTbl">
 		<tr>
 			<td align="center">
 				<table id="titleTbl">
 					<tr>
-						<td align="center">GOOD DOC</td>
+						<td align="center"><img src="resources/img/hospital.png" id="imghi" style="max-width: 60px">&nbsp;&nbsp;GOOD DOC</td>
 					</tr>
 				</table>
-				<table id="searchTbl">
+				<table id="searchTbl" >
 					<tr>
 						<td align="center" class="searchTitleTd">지역</td>
 						<td align="center" class="searchTitleTd">방문요일</td>
@@ -152,21 +152,22 @@
 							무<input type="radio" name="dutyeryn" value="2" checked="checked" id="ern">
 						</td>
 					</tr>
-					<tr>
-						<td align="center">
-							<img src="resources/img/s2.png" id="imgS2">
-						</td>
-						<td align="center" colspan="2">
-							<input placeholder="병원명 or 진료과목을 검색하세요" id="searchInput">
-						</td>
-					</tr>
+							<tr>
+								<td align="right">
+									<img src="resources/img/s2.png" id="imgS2">
+								</td>
+								<td align="center" colspan="2">
+									<input placeholder="병원명 or 진료과목을 검색하세요" id="searchInput">
+								</td>
+							</tr>
 				</table>
 				<table border="1" id="contentTbl">
 					<tr>
 						<td align="center">
-							<div id="map" style="width: 500px; height: 250px;"></div>
+							<div id="map" style="width: 550px; height: 500px;"></div>
 						</td>
 						<td align="center">
+							<div id="map" style="width: 300px; height: 500px;"></div>
 						</td>
 					</tr>
 				</table>
