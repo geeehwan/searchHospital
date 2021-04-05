@@ -17,12 +17,15 @@ public class HospitalInfoDAO {
 	// 검색어 치면 찾아주는 메소드
 	public HospitalInfos search(HttpServletRequest req, HospitalInfo hi) {
 		try {
+			// mapper에서 쓰는 변수만 set해주면 된다.
 			String hour = req.getParameter("hour");
 			String minute = req.getParameter("minute");
-			
+			System.out.println(hour);
+			System.out.println(minute);
 			String time = hour + minute;
-			int time2 = Integer.parseInt(time);
+			int time2 = Integer.parseInt(time); 
 			hi.setVisitTime(new BigDecimal(time2));
+			 System.out.println(time2);
 			hi.setDutyname(req.getParameter("searchInput"));
 			hi.setDutyaddr(req.getParameter("location"));
 			
@@ -32,26 +35,26 @@ public class HospitalInfoDAO {
 				hi.setDutyeryn(new BigDecimal(Integer.parseInt(req.getParameter("ern"))));
 			}
 			
-			if (req.getParameter("yoil") == "mon") {
+			if (req.getParameter("yoil").equals("mon")) {
 				return new HospitalInfos(ss.getMapper(HospitalMapper.class).searchHospitalName1(hi));
-			} else if (req.getParameter("yoil") == "tue") {
+			} else if (req.getParameter("yoil").equals("tue")) {
 				return new HospitalInfos(ss.getMapper(HospitalMapper.class).searchHospitalName2(hi));
-			} else if (req.getParameter("yoil") == "wed") {
+			} else if (req.getParameter("yoil").equals("wed")) {
 				return new HospitalInfos(ss.getMapper(HospitalMapper.class).searchHospitalName3(hi));
-			} else if (req.getParameter("yoil") == "thu") {
+			} else if (req.getParameter("yoil").equals("thu")) {
 				return new HospitalInfos(ss.getMapper(HospitalMapper.class).searchHospitalName4(hi));
-			} else if (req.getParameter("yoil") == "fri") {
+			} else if (req.getParameter("yoil").equals("fri")) {
 				return new HospitalInfos(ss.getMapper(HospitalMapper.class).searchHospitalName5(hi));
-			} else if (req.getParameter("yoil") == "sat") {
+			} else if (req.getParameter("yoil").equals("sat")) {
 				return new HospitalInfos(ss.getMapper(HospitalMapper.class).searchHospitalName6(hi));
-			} else if (req.getParameter("yoil") == "sun") {
+			} else if (req.getParameter("yoil").equals("sun")) {
 				return new HospitalInfos(ss.getMapper(HospitalMapper.class).searchHospitalName7(hi));
 			} else {
 				return new HospitalInfos(ss.getMapper(HospitalMapper.class).searchHospitalName8(hi));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-		}
+		} 
 		return null;
 	}
 }

@@ -7,24 +7,34 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+
 
 @Controller
 public class HospitalInfoController {
 	
 	@Autowired
-	private HospitalInfoDAO hiDAO;
+	private HospitalInfoDAO hiDAO; 
 
-	@RequestMapping(value = "/list.get", method = RequestMethod.GET)
-	public String getList(HttpServletRequest req, HttpServletResponse res, HospitalInfo hi) {
-		hiDAO.search(req, hi);
-		req.setAttribute("contentPage", "list.jsp");
-		return "index";
+	@RequestMapping(value = "/hospital.get.json", method = RequestMethod.GET, produces="application/json; charset=utf-8")
+	public @ResponseBody HospitalInfos hospitalGet(HttpServletRequest req, HttpServletResponse res, HospitalInfo hi) {
+		// hiDAO.search(req, hi);
+		// req.setAttribute("contentPage", "list.jsp");
+		res.addHeader("Access-Control-Allow-Origin", "*");
+		return hiDAO.search(req, hi);
 	}
+	
 	
 	// list에서 클릭하면 detailInfo 보여줌
 	@RequestMapping(value = "/detailInfo.go", method = RequestMethod.GET)
 	public String showDetailInfo(HttpServletRequest req, HttpServletResponse res, HospitalInfo hi) {
 		req.setAttribute("contentPage", "detailInfo.jsp");
+		return "index";
+	}
+	
+	@RequestMapping(value = "/list.up", method = RequestMethod.GET)
+	public String listUp(HttpServletRequest req, HttpServletResponse res, HospitalInfo hi) {
+		req.setAttribute("contentPage", "list.jsp");
 		return "index";
 	}
 	

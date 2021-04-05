@@ -57,7 +57,7 @@
 </head>
 <body>
 	<table id="mainTbl">
-		<tr>
+		<tr> 
 			<td align="center">
 				<table id="titleTbl">
 					<tr>
@@ -67,7 +67,7 @@
 				<table id="searchTbl" >
 					<tr>
 						<td align="center" class="searchTitleTd">지역</td>
-						<td align="center" class="searchTitleTd">방문요일</td>
+					 	<td align="center" class="searchTitleTd">방문요일</td>
 						<td align="center" class="searchTitleTd">방문시간</td>
 						<td align="center" class="searchTitleTd">응급실</td>
 					</tr>
@@ -104,7 +104,6 @@
 						</td>
 						<td align="center">
 							<select name="yoil" id="yoil">
-								<option value="choose">선택</option>
 								<option value="mon">월요일</option>
 								<option value="tue">화요일</option>
 								<option value="wed">수요일</option>

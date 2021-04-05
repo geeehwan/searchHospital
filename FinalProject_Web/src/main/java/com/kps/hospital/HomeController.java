@@ -17,7 +17,7 @@ public class HomeController {
 	
 	@Autowired
 	private HospitalInfoDAO hiDAO;
-	
+	 
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(HttpServletRequest req, HospitalInfo hi) {
