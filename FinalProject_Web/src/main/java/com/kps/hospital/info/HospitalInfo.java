@@ -25,7 +25,7 @@ public class HospitalInfo {
 	private BigDecimal dutytime7s;
 	private BigDecimal dutytime7c;
 	private BigDecimal dutytime8s;
-	private BigDecimal dutytime8c;
+	private BigDecimal dutytime8c; 
 	private BigDecimal visitTime;
 	
 	public HospitalInfo() {

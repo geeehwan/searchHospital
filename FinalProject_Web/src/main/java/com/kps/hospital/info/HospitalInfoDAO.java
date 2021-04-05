@@ -23,8 +23,14 @@ public class HospitalInfoDAO {
 			String time = hour + minute;
 			int time2 = Integer.parseInt(time);
 			hi.setVisitTime(new BigDecimal(time2));
-			hi.setDutyname(req.getParameter("dutyname"));
+			hi.setDutyname(req.getParameter("searchInput"));
+			hi.setDutyaddr(req.getParameter("location"));
 			
+			if (Integer.parseInt(req.getParameter("ery")) == 1) {
+				hi.setDutyeryn(new BigDecimal(Integer.parseInt(req.getParameter("ery"))));
+			} else {
+				hi.setDutyeryn(new BigDecimal(Integer.parseInt(req.getParameter("ern"))));
+			}
 			
 			if (req.getParameter("yoil") == "mon") {
 				return new HospitalInfos(ss.getMapper(HospitalMapper.class).searchHospitalName1(hi));
