@@ -11,7 +11,7 @@
 <script type="text/javascript" src="resources/js/jQuery.js"></script>
 <script type="text/javascript" src="resources/js/SonValidChecker.js"></script>
 <script type="text/javascript" src="resources/js/filter.js"></script>
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9556112c6875c9fcbc51bf07fb3cdb5e"></script>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=1fc1b158b795a2b1fe9af16472babd6f"></script>
 <script type="text/javascript"> 
 	$(function() {
 		navigator.geolocation.getCurrentPosition(function(loc) {
@@ -51,6 +51,18 @@
 			      location.href = "/detailInfo.go";
 			}); 
 		});
+		
+		/* $(document).ready(function(){
+		    //스크롤 발생 이벤트 처리
+		    $('#contentTbl').scroll(function(){
+		        var scrollT = $(this).scrollTop(); //스크롤바의 상단위치
+		        var scrollH = $(this).height(); //스크롤바를 갖는 div의 높이
+		        var contentH = $('#listDetail').height(); //문서 전체 내용을 갖는 div의 높이
+		        if(scrollT + scrollH +1 >= contentH) { // 스크롤바가 아래 쪽에 위치할 때
+		            // $('#divContent').append(imgs);
+		        } 
+		    });
+		}); */
 
 	});
 </script>
@@ -162,13 +174,13 @@
 							</td>
 						</tr>
 				</table>
-				<table border="1" id="contentTbl">
+				<table id="contentTbl">
 					<tr>
 						<td align="center">
 							<div id="map" style="width: 550px; height: 500px;"></div>
 						</td>
 						<td align="center">
-							<div id="map" style="width: 300px; height: 500px;">
+							<div id="listDetail" style="width: 300px; height: 500px; overflow-y:scroll;">
 								<jsp:include page="${contentPage }"></jsp:include>
 							</div>
 						</td>  

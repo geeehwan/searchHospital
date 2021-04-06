@@ -37,14 +37,14 @@ function ec(){
 	$("#dutyeryn").change(function(){
 		getList();
 	});
-	$("#searchInput").onkeyup(function(e){
-		if(e.keycode == 13){
+	$("#searchInput").keyup(function(e){
+		if(e.keyCode == 13){
 			getList();
 		}
 		//getList();
 	});
 }
-
+ 
 $(function(){
 	ec();
 });
