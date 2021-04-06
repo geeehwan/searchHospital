@@ -171,7 +171,7 @@
 							<div id="map" style="width: 300px; height: 500px;">
 								<jsp:include page="${contentPage }"></jsp:include>
 							</div>
-						</td> 
+						</td>  
 					</tr>
 				</table>
 			</td>
