@@ -10,13 +10,14 @@ function getList() {
 		$("#listTbl").empty();
 		$.each(we.hospitalInfo, function(i, h) {
 			// 테이블에 집어넣기
-			var t = text(h.dutyname);
+			var t = h.dutyname;
 			var b = $("<br>");
-			var t2 = text(h.dutytel1);
+			var t2 = h.dutytel1;
 			var td1 = $("<td></td>").append(t, b, t2);
 			var tr = $("<tr></tr>").append(td1);
 			$("#listTbl").append(tr);
 		});
+		//alert("dfsfsf");
 	});
 }
 
@@ -33,16 +34,14 @@ function ec(){
 	$("#minute").change(function(){
 		getList();
 	});
-	$("#ery").change(function(){
+	$("#dutyeryn").change(function(){
 		getList();
 	});
-	$("#ern").change(function(){
-		getList();
-	});
-	$("#searchInput").keydown(function(e){
+	$("#searchInput").onkeyup(function(e){
 		if(e.keycode == 13){
 			getList();
 		}
+		//getList();
 	});
 }
 

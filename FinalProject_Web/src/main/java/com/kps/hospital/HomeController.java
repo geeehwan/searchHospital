@@ -21,6 +21,7 @@ public class HomeController {
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(HttpServletRequest req, HospitalInfo hi) {
+		req.setAttribute("contentPage", "list.jsp");
 		return "index";
 	}
 	

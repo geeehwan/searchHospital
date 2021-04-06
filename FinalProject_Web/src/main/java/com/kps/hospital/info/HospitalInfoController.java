@@ -21,10 +21,9 @@ public class HospitalInfoController {
 		// hiDAO.search(req, hi);
 		// req.setAttribute("contentPage", "list.jsp");
 		res.addHeader("Access-Control-Allow-Origin", "*");
-		System.out.println(hiDAO.search(req, hi).getHospitalInfo().get(0).getDutyaddr());
+		// System.out.println(hiDAO.search(req, hi).getHospitalInfo().get(0).getDutyaddr());
 		return hiDAO.search(req, hi);
 	} 
-	
 	
 	// list에서 클릭하면 detailInfo 보여줌
 	@RequestMapping(value = "/detailInfo.go", method = RequestMethod.GET)
