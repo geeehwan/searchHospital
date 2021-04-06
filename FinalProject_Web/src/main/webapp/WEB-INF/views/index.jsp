@@ -8,10 +8,11 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="resources/css/index.css">
+<link rel="stylesheet" href="resources/css/filter.css">
 <script type="text/javascript" src="resources/js/jQuery.js"></script>
 <script type="text/javascript" src="resources/js/SonValidChecker.js"></script>
 <script type="text/javascript" src="resources/js/filter.js"></script>
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=1fc1b158b795a2b1fe9af16472babd6f"></script>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9556112c6875c9fcbc51bf07fb3cdb5e"></script>
 <script type="text/javascript"> 
 	$(function() {
 		navigator.geolocation.getCurrentPosition(function(loc) {
@@ -73,10 +74,10 @@
 			<td align="center">
 				<table id="titleTbl">
 					<tr>
-						<td align="center"><img src="resources/img/hospital.png" id="imghi" style="max-width: 60px">&nbsp;&nbsp;GOOD DOC</td>
+						<td align="center"><img src="resources/img/hospital.png" id="imghi" style="max-width: 60px">&nbsp;&nbsp;MEDIFOR</td>
 					</tr>
 				</table>
-				<table id="searchTbl" >
+				<table id="searchTbl">
 					<tr>
 						<td align="center" class="searchTitleTd">지역</td>
 					 	<td align="center" class="searchTitleTd">방문요일</td>

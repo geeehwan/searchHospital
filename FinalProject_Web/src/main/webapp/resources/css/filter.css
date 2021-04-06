@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+#listTbl td{
+	border-bottom: 2px solid #82B1FF;  
+	background-color: #82B1FF11;
+	width: 350px;
+	padding-left: 2px;
+	font-weight: bold;
+	color: #616161;
+	font-size: 11pt;
+}
+
+#listTbl {
+	padding-left: 10px;
+}
