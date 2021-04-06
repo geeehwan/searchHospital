@@ -16,14 +16,7 @@
 </head>
 <body>
 	<table border="1" id="listTbl">
-		<c:forEach var="lists" items="${lists }">
-			<tr>
-				<td onclick="">
-				
-					<br>	
-				</td>
-			</tr>
-		</c:forEach>
+		
 	</table>
 </body>
 </html>
