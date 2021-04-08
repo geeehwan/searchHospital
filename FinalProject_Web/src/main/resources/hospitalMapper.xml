@@ -41,4 +41,7 @@
 		and dutytime8s != 0 and dutytime8s &lt;= #{visitTime} and dutytime8c &gt;= #{visitTime} 
 		and dutyeryn = #{dutyeryn}
 	</select>
+	<select id="showDetailInfo" parameterType="com.kps.hospital.info.HospitalInfo" resultType="com.kps.hospital.info.HospitalInfo">
+		select * from hospital_info where dutyno = #{dutyno}
+	</select>
 </mapper>

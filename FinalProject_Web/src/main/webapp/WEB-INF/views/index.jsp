@@ -14,58 +14,86 @@
 <script type="text/javascript" src="resources/js/filter.js"></script>
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9556112c6875c9fcbc51bf07fb3cdb5e"></script>
 <script type="text/javascript"> 
-	$(function() {
-		navigator.geolocation.getCurrentPosition(function(loc) {
-			var lat = loc.coords.latitude;
-			var lon = loc.coords.longitude;
-			var c = new kakao.maps.LatLng(lat, lon);
-			var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
-			var options = { //지도를 생성할 때 필요한 기본 옵션
-				center : c, //지도의 중심좌표.
-				level : 3
-			//지도의 레벨(확대, 축소 정도)
-			};
+   var map = null;
+   $(function() {
+      navigator.geolocation.getCurrentPosition(function(loc) {
+         var lat = loc.coords.latitude;
+         var lon = loc.coords.longitude;
+         var c = new kakao.maps.LatLng(lat, lon);
+         var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+         var options = { //지도를 생성할 때 필요한 기본 옵션
+            center : c, //지도의 중심좌표.
+            level : 3
+         //지도의 레벨(확대, 축소 정도)
+         };
 
-			var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+          map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
 
-			var marker = new kakao.maps.Marker({
-				map : map,
-				position : c,
-				title : "현위치",
-				clickable: true
-			});
-			
-			marker.setMap(map);
-			
-			var iwContent = '<div style="padding:5px;">Hello World!</div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
-		    iwRemoveable = true; // removeable 속성을 ture 로 설정하면 인포윈도우를 닫을 수 있는 x버튼이 표시됩니다
+         var imageSrc = 'resources/img/hospital.png', // 마커이미지의 주소입니다    
+          imageSize = new kakao.maps.Size(30, 30), // 마커이미지의 크기입니다
+          imageOption = {offset: new kakao.maps.Point(27, 69)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+            
+      // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+      var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
+          markerPosition = new kakao.maps.LatLng(lat, lon); // 마커가 표시될 위치입니다
+         
+         var marker = new kakao.maps.Marker({
+            map : map,
+            position : c,
+            image: markerImage,
+            title : "현위치",
+            clickable: true
+         });
+         
+         marker.setMap(map);
+         
+         var iwContent1 = '<div style="padding:5px;">Hello</div>'; // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+         var iwContent2 = '<div style="padding:5px;">World!</div>'; // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+         
+         iwRemoveable = true; // removeable 속성을 ture 로 설정하면 인포윈도우를 닫을 수 있는 x버튼이 표시됩니다
+         
+         var infowindow = new kakao.maps.InfoWindow({
+            content : iwContent1               
+         });
+         
+         var infowindow2 = new kakao.maps.InfoWindow({
+            content : iwContent2,  
+             removable : iwRemoveable
+             
+         });
+         
+         kakao.maps.event.addListener(marker, 'mouseover', function() {
+              // 마커에 마우스오버 이벤트가 발생하면 인포윈도우를 마커위에 표시합니다
+                infowindow.open(map, marker);
+            });
 
-			var infowindow = new kakao.maps.InfoWindow({
-			    content : iwContent,
-			    removable : iwRemoveable
-			    
-			});
-		    
-			// 마커에 클릭이벤트를 등록합니다
-			kakao.maps.event.addListener(marker, 'click', function() {
-			      // 마커 위에 인포윈도우를 표시합니다
-			      location.href = "/detailInfo.go";
-			}); 
-		});
-		
-		/* $(document).ready(function(){
-		    //스크롤 발생 이벤트 처리
-		    $('#contentTbl').scroll(function(){
-		        var scrollT = $(this).scrollTop(); //스크롤바의 상단위치
-		        var scrollH = $(this).height(); //스크롤바를 갖는 div의 높이
-		        var contentH = $('#listDetail').height(); //문서 전체 내용을 갖는 div의 높이
-		        if(scrollT + scrollH +1 >= contentH) { // 스크롤바가 아래 쪽에 위치할 때
-		            // $('#divContent').append(imgs);
-		        } 
-		    });
-		}); */
+            // 마커에 마우스아웃 이벤트를 등록합니다
+            kakao.maps.event.addListener(marker, 'mouseout', function() {
+                // 마커에 마우스아웃 이벤트가 발생하면 인포윈도우를 제거합니다
+                infowindow.close();
+            });
+          
+         // 마커에 클릭이벤트를 등록합니다
+         kakao.maps.event.addListener(marker, 'click', function() {
+               // 마커 위에 인포윈도우를 표시합니다
+               infowindow2.open(map, marker); 
+               // location.href = "/detailInfo.go";
+         }); 
+      });
+      
+      /* $(document).ready(function(){
+          //스크롤 발생 이벤트 처리
+          $('#contentTbl').scroll(function(){
+              var scrollT = $(this).scrollTop(); //스크롤바의 상단위치
+              var scrollH = $(this).height(); //스크롤바를 갖는 div의 높이
+              var contentH = $('#listDetail').height(); //문서 전체 내용을 갖는 div의 높이
+              if(scrollT + scrollH +1 >= contentH) { // 스크롤바가 아래 쪽에 위치할 때
+                  // $('#divContent').append(imgs);
+              } 
+          });
+      }); */
 
-	});
+   });
 </script>
 </head>
 <body>
@@ -161,8 +189,8 @@
 						</td>
 						<td align="center">
 							<select name="dutyeryn" id="dutyeryn">
-								<option value="1">유</option>
 								<option value="2">무</option>
+								<option value="1">유</option>
 							</select>
 						</td>
 						</tr>

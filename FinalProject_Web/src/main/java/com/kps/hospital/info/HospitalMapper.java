@@ -11,4 +11,5 @@ public interface HospitalMapper {
 	public abstract List<HospitalInfo> searchHospitalName6(HospitalInfo hi);
 	public abstract List<HospitalInfo> searchHospitalName7(HospitalInfo hi);
 	public abstract List<HospitalInfo> searchHospitalName8(HospitalInfo hi);
+	public abstract List<HospitalInfo> showDetailInfo(HospitalInfo hi);
 }

@@ -28,6 +28,7 @@ public class HospitalInfoController {
 	// list에서 클릭하면 detailInfo 보여줌
 	@RequestMapping(value = "/detailInfo.go", method = RequestMethod.GET)
 	public String showDetailInfo(HttpServletRequest req, HttpServletResponse res, HospitalInfo hi) {
+		hiDAO.showInfo(req, hi);
 		req.setAttribute("contentPage", "detailInfo.jsp");
 		return "index";
 	}
@@ -37,6 +38,7 @@ public class HospitalInfoController {
 		req.setAttribute("contentPage", "list.jsp");
 		return "index";
 	}
+	
 	
 
 	
