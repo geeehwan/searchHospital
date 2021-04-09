@@ -26,6 +26,7 @@ body {
 	outline: none;
 }
 
+
 #titleTbl {
 	margin-top: 40px;
 	margin-left: auto;
@@ -36,6 +37,11 @@ body {
 	font-family: "C";
 	border-radius: 2px;
 	outline: none;
+}
+
+#titleTbl a{
+	text-decoration: none;
+	color: #82B1FF;
 }
 
 .searchTitleTd {

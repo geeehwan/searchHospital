@@ -11,31 +11,37 @@
 <script type="text/javascript" src="resources/js/jQuery.js"></script>
 <script type="text/javascript" src="resources/js/SonValidChecker.js"></script>
 <script type="text/javascript" src="resources/js/filter.js"></script>
+
 </head> 
 <body>
-		<table border="1" id="detailInfoTbl">
+	
+		<table id="detailInfoTbl">
 				<tr>
-					<td>
+					<td id="dutynameTd">
 						${infos.dutyname } 
+					</td>
+					<td align="right" id="buttonTd">
+						
+						<button id="closeBtn" onclick="history.back(-1)">X</button>
 					</td>
 				</tr>
 				<tr>
-					<td>
+					<td colspan="2" class="etcTd">
 						${infos.dutyaddr } 
 					</td>
 				</tr>
 				<tr>
-					<td>
+					<td colspan="2" class="etcTd">
 						${infos.dutytel1 } 
 					</td>
 				</tr>
 				<tr>
-					<td>
+					<td colspan="2" class="etcTd">
 						${infos.dutyeryn } 
 					</td>
 				</tr>
 				<tr>
-					<td>
+					<td colspan="2" class="etcTd">
                			월요일 - ${infos.dutytime1s } ~ ${infos.dutytime1c }<br>
                			화요일 - ${infos.dutytime2s } ~ ${infos.dutytime2c }<br>
                			수요일 - ${infos.dutytime3s } ~ ${infos.dutytime3c }<br>

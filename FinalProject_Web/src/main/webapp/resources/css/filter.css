@@ -10,15 +10,20 @@
 	font-size: 11pt;
 }
 
+#dutynameTd{
+	font-size: 14pt;
+}
+
 #listTbl {
 	padding-left: 10px;
 }
 
 #detailInfoTbl{
 	padding-left: 10px;
+	border-spacing: 0px;
 	
 }
-#detailInfoTbl td{
+.etcTd{
 	border-bottom: 2px solid #82B1FF;  
 	background-color: #82B1FF11;
 	width: 350px;
@@ -28,3 +33,25 @@
 	font-size: 11pt;
 	
 }
+#dutynameTd{
+	border-bottom: 2px solid #82B1FF;  
+	background-color: #82B1FF11;
+	width: 330px;
+	padding-left: 2px;
+	font-weight: bold;
+	color: #616161;
+	font-size: 15pt;
+}
+#buttonTd{
+	border-bottom: 2px solid #82B1FF;  
+	background-color: #82B1FF11;
+	padding-left: 2px;
+	font-weight: bold;
+	color: #616161;
+	font-size: 11pt;
+	top: 0px;
+	right: 0px;
+	width: 20px;
+	
+}
+

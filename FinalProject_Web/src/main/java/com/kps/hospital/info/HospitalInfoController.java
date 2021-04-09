@@ -39,10 +39,9 @@ public class HospitalInfoController {
 		return "index";
 	}
 	
-	
-
-	
-	
-	
-	
+//	@RequestMapping(value = "/back.to.list", method = RequestMethod.GET)
+//	public String backToList(HttpServletRequest req, HttpServletResponse res, HospitalInfo hi) {
+//		req.setAttribute("contentPage", "list.jsp");
+//		return "index";
+//	}
 }

@@ -20,9 +20,15 @@ public class HomeController {
 	 
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(HttpServletRequest req, HospitalInfo hi) {
+	public String home(HttpServletRequest req) {
 		req.setAttribute("contentPage", "list.jsp");
 		return "index";
+	}
+	
+	@RequestMapping(value = "/index.go", method = RequestMethod.GET)
+	public String home2(HttpServletRequest req) {
+		req.setAttribute("contentPage", "list.jsp");
+		return home(req);
 	}
 	
 }
