@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head> 
-<meta charset="UTF-8">
+<meta charset="UTF-8"> 
 <title>Insert title here</title>
 <link rel="stylesheet" href="resources/css/index.css">
 <link rel="stylesheet" href="resources/css/filter.css">
