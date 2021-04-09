@@ -7,28 +7,21 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.kps.hospital.info.HospitalInfo;
 import com.kps.hospital.info.HospitalInfoDAO;
 
 
 @Controller
 public class HomeController {
-	
-	
-	@Autowired
-	private HospitalInfoDAO hiDAO;
-	 
-	
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(HttpServletRequest req) {
-		req.setAttribute("contentPage", "list.jsp");
-		return "index";
-	}
-	
-	@RequestMapping(value = "/index.go", method = RequestMethod.GET)
-	public String home2(HttpServletRequest req) {
-		req.setAttribute("contentPage", "list.jsp");
-		return home(req);
-	}
-	
+   
+   
+   @Autowired
+   private HospitalInfoDAO hiDAO;
+    
+   
+   @RequestMapping(value = "/", method = RequestMethod.GET)
+   public String home(HttpServletRequest req) {
+      req.setAttribute("contentPage", "list.jsp");
+      return "index";
+   }
+   
 }
