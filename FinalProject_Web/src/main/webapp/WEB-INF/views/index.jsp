@@ -14,7 +14,7 @@
 <script type="text/javascript" src="resources/js/filter.js"></script>
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=1fc1b158b795a2b1fe9af16472babd6f"></script>
 <!-- 1fc1b158b795a2b1fe9af16472babd6f -->
-<!-- 9556112c6875c9fcbc51bf07fb3cdb5e -->
+<!-- 9556112c6875c9fcbc51bf07fb3cdb5e --> 
 <script type="text/javascript" src="resources/js/backToList.js"></script>
 <script type="text/javascript"> 
    var map = null;
