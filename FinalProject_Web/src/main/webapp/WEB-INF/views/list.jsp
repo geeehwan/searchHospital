@@ -11,9 +11,10 @@
 <script type="text/javascript" src="resources/js/jQuery.js"></script>
 <script type="text/javascript" src="resources/js/SonValidChecker.js"></script>
 <script type="text/javascript" src="resources/js/filter.js"></script>
-
 </head>
 <body>
+    <table id="detailInfoTbl" border="1">
+    </table>
 	<table id="listTbl">
 	</table>
 </body>

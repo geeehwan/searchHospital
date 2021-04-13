@@ -42,14 +42,14 @@
             </tr>
             <tr>
                <td colspan="2" class="etcTd">
-                        월요일 - ${infos.dutytime1s } ~ ${infos.dutytime1c }<br>
-                        화요일 - ${infos.dutytime2s } ~ ${infos.dutytime2c }<br>
-                        수요일 - ${infos.dutytime3s } ~ ${infos.dutytime3c }<br>
-                        목요일 - ${infos.dutytime4s } ~ ${infos.dutytime4c }<br>
-                        금요일 - ${infos.dutytime5s } ~ ${infos.dutytime5c }<br>
-                       토요일 - ${infos.dutytime6s } ~ ${infos.dutytime6c }<br>
-                        일요일 - ${infos.dutytime7s } ~ ${infos.dutytime7c }<br>
-                        공휴일 - ${infos.dutytime8s } ~ ${infos.dutytime8c }
+                        월요일  ${infos.dutytime1s } ~ ${infos.dutytime1c }<br>
+                        화요일  ${infos.dutytime2s } ~ ${infos.dutytime2c }<br>
+                        수요일  ${infos.dutytime3s } ~ ${infos.dutytime3c }<br>
+                        목요일  ${infos.dutytime4s } ~ ${infos.dutytime4c }<br>
+                        금요일  ${infos.dutytime5s } ~ ${infos.dutytime5c }<br>
+                       토요일  ${infos.dutytime6s } ~ ${infos.dutytime6c }<br>
+                        일요일  ${infos.dutytime7s } ~ ${infos.dutytime7c }<br>
+                        공휴일  ${infos.dutytime8s } ~ ${infos.dutytime8c }
                   </td>
             </tr>
       </table>

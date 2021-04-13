@@ -25,16 +25,27 @@ public class HospitalInfoController {
 		return hiDAO.search(req, hi);
 	} 
 	
+	@RequestMapping(value = "/detailInfo.get.json", method = RequestMethod.GET, produces="application/json; charset=utf-8")
+	public @ResponseBody HospitalInfos infoGet(HttpServletRequest req, HttpServletResponse res, HospitalInfo hi) {
+		// hiDAO.search(req, hi);
+		// req.setAttribute("contentPage", "list.jsp");
+		res.addHeader("Access-Control-Allow-Origin", "*");
+		// System.out.println(hiDAO.search(req, hi).getHospitalInfo().get(0).getDutyaddr());
+		return hiDAO.showInfo(req, hi);
+	} 
+	
 	// list에서 클릭하면 detailInfo 보여줌
 	@RequestMapping(value = "/detailInfo.go", method = RequestMethod.GET)
 	public String showDetailInfo(HttpServletRequest req, HttpServletResponse res, HospitalInfo hi) {
 		hiDAO.showInfo(req, hi);
-		req.setAttribute("contentPage", "detailInfo.jsp");
+		req.setAttribute("contentPage", "list.jsp");
 		return "index";
 	}
 	
 	@RequestMapping(value = "/list.up", method = RequestMethod.GET)
 	public String listUp(HttpServletRequest req, HttpServletResponse res, HospitalInfo hi) {
+		hiDAO.search(req, hi);
+		//hiDAO.showInfo(req, hi);
 		req.setAttribute("contentPage", "list.jsp");
 		return "index";
 	}

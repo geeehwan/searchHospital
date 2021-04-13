@@ -61,18 +61,18 @@ public class HospitalInfoDAO {
 	}
 	
 	// 프라이머리 키 받아오면 그 해당 병원 정보 받아오는 메소드
-	public void showInfo(HttpServletRequest req, HospitalInfo hi) {
+	public HospitalInfos showInfo(HttpServletRequest req, HospitalInfo hi) {
 		try {
 			// 이거 할 필요 없음 스프링이 매퍼 통해서 알아서 해줌
 			// int dutyno = Integer.parseInt(req.getParameter("dutyno")); 
 			// System.out.println(hi.getDutyno());
-			List<HospitalInfo> infos = ss.getMapper(HospitalMapper.class).showDetailInfo(hi);
+			return new HospitalInfos(ss.getMapper(HospitalMapper.class).showDetailInfo(hi));
 			// System.out.println(infos.size());
-			req.setAttribute("infos", infos.get(0)); // 하나만 보내니까
+			// req.setAttribute("infos", infos.get(0)); // 하나만 보내니까
 			
 		} catch (Exception e) {
 			e.printStackTrace();
-			
 		}
+		return null;
 	}
 }
